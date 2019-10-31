@@ -39,7 +39,7 @@ public class Main extends Application {
                 NetworkHandler.getInstance().setupClient(host, port);
                 launch(args);
             } catch (IOException e) {
-                System.out.println("Error connecting to client");
+                System.out.println("Error connecting to server");
                 System.exit(0);
             }
         } else {

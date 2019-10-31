@@ -6,14 +6,17 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<GridPane alignment="center" hgap="10" vgap="10" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.121" fx:controller="sample.Controller">
-    <TextField fx:id="messageInput" prefWidth="200.0" />
-    <Button fx:id="sendButton" alignment="CENTER_LEFT" contentDisplay="CENTER" mnemonicParsing="false" onAction="#sendMessage" text="Send" textAlignment="CENTER" GridPane.columnIndex="1" />
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+    <TextField fx:id="username" prefWidth="100.0" promptText="Name" />
+    <TextField fx:id="messageInput" prefWidth="200.0" promptText="Message" GridPane.rowIndex="1" />
+    <Button fx:id="sendButton" alignment="CENTER_LEFT" contentDisplay="CENTER" mnemonicParsing="false" onAction="#sendMessage" text="Send" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="1" />
    <columnConstraints>
+      <ColumnConstraints />
       <ColumnConstraints />
       <ColumnConstraints />
    </columnConstraints>
    <rowConstraints>
-      <RowConstraints />
+       <RowConstraints />
+       <RowConstraints />
    </rowConstraints>
 </GridPane>
