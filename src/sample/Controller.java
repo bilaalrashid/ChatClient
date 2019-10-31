@@ -34,6 +34,11 @@ public class Controller {
 
         if (!text.equals("")) {
             String username = this.username.getText();
+
+            if (username.equals("")) {
+                username = "Anon";
+            }
+
             Message message = new Message(username, text);
             NetworkHandler.getInstance().sendMessage(message.toJsonString());
         }
