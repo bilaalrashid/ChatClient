@@ -37,9 +37,9 @@ class Client {
      * @throws IOException Error setting up socket stream
      */
     Client(String host, int port) throws IOException {
-        Socket kkSocket = new Socket(host, port);
-        this.clientInput = new BufferedReader(new InputStreamReader(kkSocket.getInputStream()));
-        this.clientOutput = new PrintWriter(kkSocket.getOutputStream(), true);
+        Socket socket = new Socket(host, port);
+        this.clientInput = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+        this.clientOutput = new PrintWriter(socket.getOutputStream(), true);
     }
 
     // Send
