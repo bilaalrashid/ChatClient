@@ -31,9 +31,12 @@ public class Controller {
     @FXML
     private void sendMessage() {
         String text = this.messageInput.getText();
-        String username = this.username.getText();
-        Message message = new Message(username, text);
-        NetworkHandler.getInstance().sendMessage(message.toJsonString());
+
+        if (!text.equals("")) {
+            String username = this.username.getText();
+            Message message = new Message(username, text);
+            NetworkHandler.getInstance().sendMessage(message.toJsonString());
+        }
     }
 
 }
