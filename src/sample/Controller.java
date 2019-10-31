@@ -8,18 +8,24 @@ import javafx.scene.control.TextField;
  */
 public class Controller {
 
+    // Properties
+
     /**
      * The TextField to input a new message
      */
     @FXML
     private TextField messageInput;
 
+    // Methods
+
     /**
      * Sends the inputted message
      */
     @FXML
     private void sendMessage() {
-        String message = this.messageInput.getText();
+        String text = this.messageInput.getText();
+        Message message = new Message("Test name", text);
+        NetworkHandler.getInstance().sendMessage(message.toJsonString());
     }
 
 }

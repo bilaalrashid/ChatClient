@@ -39,6 +39,17 @@ class Message {
         this.text = text;
     }
 
+    /**
+     * Creates a new message
+     * @param name The name of the sender
+     * @param text The text being sent
+     */
+    Message(String name, String text) {
+        this.name = name;
+        this.timestamp = LocalDateTime.now();
+        this.text = text;
+    }
+
     // Name
 
     /**

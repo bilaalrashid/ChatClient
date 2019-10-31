@@ -6,6 +6,8 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+import java.io.IOException;
+
 /**
  * The main interface for the client
  */
@@ -25,15 +27,24 @@ public class Main extends Application {
     }
 
     /**
-     * Gets the port to run the client on and starts the UI
+     * Starts running the client connection for the socket and starts the UI
      * @param args The command lin arguments
      */
     public static void main(String[] args) {
-        if (args != null && args.length == 1) {
-            int port = Integer.parseInt(args[0]);
-            launch(args);
+        if (args != null && args.length == 2) {
+            String host = args[0];
+            int port = Integer.parseInt(args[1]);
+
+            try {
+                NetworkHandler.getInstance().setupClient(host, port);
+                launch(args);
+            } catch (IOException e) {
+                System.out.println("Error connecting to client");
+                System.exit(0);
+            }
         } else {
             System.out.println("Invalid arguments. Port not specified.");
+            System.exit(0);
         }
     }
 
