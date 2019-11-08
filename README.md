@@ -12,3 +12,7 @@ java Main [host] [port]
 ## Screenshot
 
 ![Screenshot](screenshot.png)
+
+## Server
+
+The server can be found at [bilaalrashid/ChatServer](https://github.com/bilaalrashid/ChatServer)
