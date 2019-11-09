@@ -28,7 +28,7 @@ public class Main extends Application {
 
     /**
      * Starts running the client connection for the socket and starts the UI
-     * @param args The command lin arguments
+     * @param args The command line arguments
      */
     public static void main(String[] args) {
         if (args != null && args.length == 2) {
